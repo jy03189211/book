@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/fragment"
+    android:orientation="vertical" >
+
+	    <EditText
+	        android:id="@+id/bookName"
+	        style="@style/title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="10"
+	        android:hint="@string/new_book_hint"
+	        android:imeOptions="actionDone"
+	        android:inputType="textCapWords" >
+	
+	       
+	    </EditText>
+
+        <ListView
+            android:id="@+id/wordList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="99"
+             >
+
+        </ListView>
+        
+        <LinearLayout
+            android:id="@+id/toolbar"
+            style="@style/imagetoolbar"
+			 >
+            <ImageButton
+                android:id="@+id/select"
+                style="@style/imagebutton"
+                android:layout_margin="8dp"
+                android:src="@drawable/expand" />
+            
+            <ImageButton
+                android:id="@+id/deselect"
+                style="@style/imagebutton"
+                android:layout_margin="8dp"
+                android:src="@drawable/minimize" />
+            
+            <ImageButton
+                android:id="@+id/ok"
+                style="@style/imagebutton"
+                android:layout_margin="8dp"
+                android:src="@drawable/export" />
+
+        </LinearLayout>
+</LinearLayout>

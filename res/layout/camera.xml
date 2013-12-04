@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    style="@style/fragment"
+    android:orientation="vertical" >
+
+	    <EditText
+	        android:id="@+id/addtext"
+	        style="@style/title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="@string/new_book_hint"
+	        android:inputType="textCapWords" >
+	
+	      
+	    </EditText>
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            style="@style/imagetoolbar"
+			 >
+
+            <ImageButton
+                android:id="@+id/ok"
+                style="@style/imagebutton"
+                android:layout_margin="8dp"
+                android:src="@drawable/export" />
+
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:orientation="vertical" 
+    style="@style/fragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/bookName"
+            style="@style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            style="@style/imagebutton"
+            android:src="@drawable/trash" />
+
+    </LinearLayout>
+
+         <ExpandableListView
+	        android:id="@+id/wordList"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1" >
+    	</ExpandableListView>
+        
+         <LinearLayout
+           android:id="@+id/toolbar"
+           style="@style/imagetoolbar"
+		 >
+           
+           <ImageButton
+               android:id="@+id/add"
+               style="@style/imagebutton"                
+               android:src="@drawable/plus" />
+
+       </LinearLayout>
+      
+</LinearLayout>
