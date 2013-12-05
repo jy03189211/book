@@ -59,6 +59,7 @@ public class BookListFragment extends Fragment implements OnItemClickListener, O
 
 	@Override
 	public void onClick(View arg0) {
-		this.pager.show(this.pager.CAMERA, true);		
+		
+		//this.pager.show(this.pager.CAMERA, true);		
 	}
 }

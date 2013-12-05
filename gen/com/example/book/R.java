@@ -39,21 +39,23 @@ public final class R {
         public static final int trash=0x7f02000f;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000f;
+        public static final int action_settings=0x7f080011;
         public static final int add=0x7f080002;
+        public static final int addstring=0x7f08000a;
         public static final int addtext=0x7f080008;
         public static final int bookList=0x7f080000;
         public static final int bookName=0x7f080005;
         public static final int bookname=0x7f080003;
         public static final int delete=0x7f080006;
-        public static final int deselect=0x7f08000b;
+        public static final int deselect=0x7f08000d;
         public static final int ok=0x7f080009;
-        public static final int pager_title_strip=0x7f08000c;
-        public static final int select=0x7f08000a;
+        public static final int opencamera=0x7f08000b;
+        public static final int pager_title_strip=0x7f08000e;
+        public static final int select=0x7f08000c;
         public static final int toolbar=0x7f080001;
-        public static final int translation=0x7f08000d;
+        public static final int translation=0x7f08000f;
         public static final int viewpager=0x01010000;
-        public static final int word=0x7f08000e;
+        public static final int word=0x7f080010;
         public static final int wordList=0x7f080007;
         public static final int wordcount=0x7f080004;
     }
@@ -78,10 +80,6 @@ public final class R {
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.

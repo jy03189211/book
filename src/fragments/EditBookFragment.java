@@ -42,8 +42,6 @@ public class EditBookFragment extends Fragment implements OnClickListener{
         
         this.textfield = (EditText) this.view.findViewById(R.id.bookName);        
         this.list = (ListView)this.view.findViewById(R.id.wordList);
-        //this.list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE); // multiselect listview        		        
-
         
         if (pager.editBook != null){
         	this.setBook(pager.editBook);
@@ -73,6 +71,18 @@ public class EditBookFragment extends Fragment implements OnClickListener{
 		return this.textfield.getText().toString();
 	}
 	
+	public void createNew(String name){
+		this.book = this.pager.createBook();
+		this.book.setName(name);
+	}
+	
+	public void setBook(String text){
+		if (this.book == null){
+			this.book = this.pager.createBook();
+		}
+		
+		this.book.setString(text);
+	}
 	// set the book...
 	public void setBook(Book book){		
 		this.clear();
@@ -127,15 +137,12 @@ public class EditBookFragment extends Fragment implements OnClickListener{
 	public void onClick(View v) {
 		switch ( v.getId() ){
 			case R.id.ok:
-				Book bk =  new Book();
+				Book bk =  this.pager.createBook();
 				bk.setName(this.getName());
-				bk.addWords(this.getSelected());
-				
-				System.out.println(bk.getCount() );
+				bk.addWords(this.getSelected());				
 				
 				pager.addBook(bk);
 				
-
 				this.pager.hideKeyboard(this.textfield);
 				this.clear();
 				pager.show(pager.BOOKLIST,true);

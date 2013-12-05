@@ -4,13 +4,39 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.Db;
+
 public class Book {
 	private long id; // database id of the book
 	private String name;
 	private HashMap<String, List<String>> words;
+	private Db db;
 	
-	public Book(){
+	public Book(Db db){
+		this.db = db;
 		this.words = new HashMap<String, List<String>>();	
+	}
+	
+	public void save(){
+		this.db.save(this);
+	}
+	
+	public void load(){
+	}
+	
+	public void remove(){
+		this.db.remove(this);
+	}
+	
+	
+	
+	public void setString(String text){
+		this.words = new HashMap<String, List<String>>();
+		String[] txt = text.split(" ");
+		
+		for (String t : txt){
+			this.addWord(t);
+		}
 	}
 	
 	public void Clear(){

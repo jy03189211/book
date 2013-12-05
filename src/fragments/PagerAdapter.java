@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class PagerAdapter extends FragmentPagerAdapter {
-    private static final String[] titles = {"camera","edit","browse","book"};		 
+    private static final String[] titles = {"browse","book"};//{"camera","edit","browse","book"};		 
     private List<Fragment> fragments;
 
     public PagerAdapter(FragmentManager fm, List<Fragment> fragments) {

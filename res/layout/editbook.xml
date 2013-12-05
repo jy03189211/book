@@ -12,7 +12,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:ems="10"
-	        android:hint="@string/new_book_hint"
+	        android:hint="book name goes here"
 	        android:imeOptions="actionDone"
 	        android:inputType="textCapWords" >
 	
@@ -33,21 +33,28 @@
             style="@style/imagetoolbar"
 			 >
             <ImageButton
+                android:id="@+id/addstring"
+                style="@style/imagebutton"
+                android:src="@drawable/plus" />
+
+            <ImageButton
+                android:id="@+id/opencamera"
+                style="@style/imagebutton"
+                android:src="@drawable/camera" />
+            
+            <ImageButton
                 android:id="@+id/select"
                 style="@style/imagebutton"
-                android:layout_margin="8dp"
                 android:src="@drawable/expand" />
             
             <ImageButton
                 android:id="@+id/deselect"
                 style="@style/imagebutton"
-                android:layout_margin="8dp"
                 android:src="@drawable/minimize" />
             
             <ImageButton
                 android:id="@+id/ok"
-                style="@style/imagebutton"
-                android:layout_margin="8dp"
+                style="@style/imagebutton"                
                 android:src="@drawable/export" />
 
         </LinearLayout>

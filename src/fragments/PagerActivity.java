@@ -108,6 +108,10 @@ public class PagerActivity extends FragmentActivity implements OnClickListener{
     	return BOOKS.contains(book);
     }
     
+    public Book createBook(){
+    	Book bk = new Book(this.DB);
+    	return bk;
+    }
     
     // method to add book into array
     public void addBook(Book book){
@@ -121,20 +125,19 @@ public class PagerActivity extends FragmentActivity implements OnClickListener{
     	}
     
 		this.editBook = null;
-    	translator.translate(book);
-    	DB.save(book);    	
+    	translator.translate(book);    	
     	BOOKLIST.refresh();
     }
     
     public void removeBook(Book book){
+    	book.remove();
     	BOOKS.remove(book);
-    	DB.remove(book);
     	BOOKLIST.refresh();
     	openBook = null;
     }
    
     public void saveBook(Book book){
-    	DB.save(book);
+    	book.save();
     	BOOKLIST.refresh();
     }
     
@@ -152,15 +155,15 @@ public class PagerActivity extends FragmentActivity implements OnClickListener{
     	
     	translator = new Translator(DB);
     	
-    	CAMERA = new CameraFragment();
-    	EDITBOOK = new EditBookFragment();
+    	//CAMERA = new CameraFragment();
+    	//EDITBOOK = new EditBookFragment();
     	BOOKLIST = new BookListFragment();
     	BOOKVIEW = new BookViewFragment();
     	
     	
     	
-    	fragments.add(CAMERA);
-    	fragments.add(EDITBOOK);
+    	//fragments.add(CAMERA);
+    	//fragments.add(EDITBOOK);
     	fragments.add(BOOKLIST);
     	fragments.add(BOOKVIEW);
     	    	

@@ -21,6 +21,12 @@ import com.example.book.R;
  * 
  * 			bookview
  * 
+ * 
+ * 
+ * 			two buttons
+ * 					one for keyboard input
+ * 					one for camera
+ * 
  * 				shows contents of one book in a listview
  */
 public class BookViewFragment extends Fragment implements OnItemClickListener, OnClickListener{
