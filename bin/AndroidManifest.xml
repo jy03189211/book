@@ -25,6 +25,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name="edu.sfsu.cs.orange.ocr.CaptureActivity"
+              android:screenOrientation="landscape"
+              android:configChanges="orientation|keyboardHidden|screenSize"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+              android:windowSoftInputMode="stateAlwaysHidden"              
+              >
+     </activity>
+      
+    <activity android:name="edu.sfsu.cs.orange.ocr.HelpActivity"
+              android:screenOrientation="user">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+     
+    
+    <activity android:name="edu.sfsu.cs.orange.ocr.PreferencesActivity" />
+    
     </application>
-
+	<uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 </manifest>

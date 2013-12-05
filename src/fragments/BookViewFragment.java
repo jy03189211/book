@@ -2,6 +2,8 @@ package fragments;
 
 import java.util.HashMap;
 import java.util.List;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -17,6 +20,8 @@ import book.Book;
 import book.ExpandableListAdapter;
 
 import com.example.book.R;
+
+import edu.sfsu.cs.orange.ocr.CaptureActivity;
 /*
  * 
  * 			bookview
@@ -40,7 +45,9 @@ public class BookViewFragment extends Fragment implements OnItemClickListener, O
 	private TextView name;
 	
 	private ImageButton delete;
-		
+	
+	
+	private Button button1;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         if (container == null) {
             return null;
@@ -55,7 +62,16 @@ public class BookViewFragment extends Fragment implements OnItemClickListener, O
         		
 		//this.list.setOnItemClickListener(this);
 
-		
+        button1=(Button)this.view.findViewById(R.id.button1);
+        button1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent();
+                intent.setClass(getActivity(), CaptureActivity.class);
+                startActivity(intent);
+			}
+		});
 		ImageButton btn = (ImageButton) this.view.findViewById(R.id.add);
 		btn.setOnClickListener(this);
 		

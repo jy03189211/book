@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.book.R;
 
 
+
 /*
  * 
  *		adapter for listing the books 

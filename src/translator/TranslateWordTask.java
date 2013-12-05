@@ -7,8 +7,8 @@ import com.memetix.mst.translate.Translate;
 
 public class TranslateWordTask extends AsyncTask<Object, Object, Object> {
 	
-	private final String id = "7289e55c-9818-4165-b7ec-9acd27beedf0";
-	private final String key = "7lg8F/NaSZ1vLFDqmGiBI/AnVX8MwEt+X666lqNM3i0=";
+	private final String id = "jy03189211";
+	private final String key = "metropoliasanapickup";
 	
 	public TranslateWordTask(){
 		super();
